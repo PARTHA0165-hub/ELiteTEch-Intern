@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>🌤 Live Weather</h1>
+            <p>Get real-time weather updates instantly</p>
+        </header>
+
+        <div style="text-align: right; margin-bottom: 10px;">
+            <button id="themeToggle" style="padding: 8px 12px; border: none; border-radius: 8px; background: #ff9800; color: white; cursor: pointer; font-size: 0.9rem;">
+                🌙 Toggle Theme
+            </button>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name...">
+            <button onclick="getWeather()">Search</button>
+        </div>
+
+        <button class="location-btn" onclick="getLocationWeather()">📍 Detect My Location</button>
+
+        <div id="weatherResult" class="weather-card">
+            <p>Type a city name or use location 🌎</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.getElementById('themeToggle').addEventListener('click', () => {
+            document.body.classList.toggle('light');
+        });
+    </script>
+</body>
+</html>
